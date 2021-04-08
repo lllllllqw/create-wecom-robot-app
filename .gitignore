@@ -1,5 +1,11 @@
+# dep
 node_modules
 
+# build
 dist
 
+# editor
 .vscode
+
+# other
+*.log

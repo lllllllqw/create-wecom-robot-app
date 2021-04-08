@@ -8,11 +8,11 @@ const pipeline = promisify(Stream.pipeline)
 const TEMPLATE_URL = 'https://codeload.github.com/lllllllqw/robot-template/tar.gz/main'
 
 export const downloadRepo = async () => {
-    pipeline(
+    return pipeline(
       got.stream(TEMPLATE_URL),
       tar.extract({
-        cwd: path.resolve('./')
+        cwd: path.resolve('./'),
+        strip: 1
       })
     )
-
 }
