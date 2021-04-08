@@ -1,0 +1,30 @@
+{
+  "name": "create-wecom-robot-app",
+  "version": "0.0.1",
+  "description": "create a initial project for WeCom robot",
+  "main": "index.js",
+  "author": "lllllllqw",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev:debug": "node --inspect-brk -r ts-node/register index.ts",
+    "dev": "ncc build ./index.ts --no-source-map-register -s -w -o dist/",
+    "prerelease": "rimraf ./dist/",
+    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
+    "prepublish": "yarn release"
+  },
+  "dependencies": {
+    "commander": "^7.2.0",
+    "got": "^11.8.2",
+    "prompts": "^2.4.0",
+    "tar": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@types/prompts": "^2.0.10",
+    "@types/tar": "^4.0.4",
+    "@vercel/ncc": "^0.27.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
