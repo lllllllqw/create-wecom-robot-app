@@ -2,7 +2,12 @@
   "name": "create-wecom-robot-app",
   "version": "0.0.1",
   "description": "create a initial project for WeCom robot",
-  "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "create-wecom-robot-app": "./dist/index.js"
+  },
   "author": "lllllllqw",
   "license": "MIT",
   "private": false,
