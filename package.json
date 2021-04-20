@@ -1,6 +1,6 @@
 {
   "name": "create-wecom-robot-app",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "create a initial project for WeCom robot",
   "bin": {
     "create-wecom-robot-app": "./dist/index.js"
